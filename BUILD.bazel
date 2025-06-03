@@ -1,4 +1,4 @@
 cc_binary(
     name = "my_app",
-    srcs = ["main.cpp"],
+    srcs = ["test.cpp"],
 )
