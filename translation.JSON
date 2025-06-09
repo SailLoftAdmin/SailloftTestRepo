@@ -1,0 +1,4 @@
+{
+  "name1": "bazel build //tests:name1 && ./bazel-bin/tests/name1",
+  "name2": "bazel test //tests:name2"
+}
