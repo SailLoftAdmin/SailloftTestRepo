@@ -1,16 +1,17 @@
-{
-  "myapp": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp",
-  "myapp_portable": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp_portable",
-  "draw:draw": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/draw:draw",
-  "tools:tests": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:tests",
-  "ray:unittests": "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //ray:unittests",
-  "ray:apps": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //ray/apps/...",
-  "wrapper_smart_ptrs:unittests": "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //src/wrapper_smart_ptrs:unittests",
-  "tools:cskiaapp": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //tools:cskiaapp",
-  "tools:rasterapp": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:rasterapp",
-  "gm": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //gm:gmapp -- -o ./temp",
-  "tools:bench": "bazel run --verbose_failures --compilation_mode=opt --config=symbols //tools:bench",
-  "ray:rasterizer_bench": "bazel run --verbose_failures --compilation_mode=opt --config=symbols //ray/drawlib:rasterizer_bench",
-  "image_test:Generate_Images": "mkdir create_images && bazel run //gm:gmapp -- -o \"$(pwd)/create_images\" && chmod +x ./sailloft/image_script.sh",
-  "image_test:Compute_Against_Base": "./sailloft/image_script.sh $(pwd)/create_images $GITHUB_SHA GithubRunner ${{ runner.os }} ${{ runner.architecture }}"
+{"Test-MacOS-MacMini":{
+    "myapp": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp",
+    "myapp_portable": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp_portable",
+    "draw:draw": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/draw:draw",
+    "tools:tests": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:tests",
+    "ray:unittests": "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //ray:unittests",
+    "ray:apps": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //ray/apps/...",
+    "wrapper_smart_ptrs:unittests": "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //src/wrapper_smart_ptrs:unittests",
+    "tools:cskiaapp": "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //tools:cskiaapp",
+    "tools:rasterapp": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:rasterapp",
+    "gm": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //gm:gmapp -- -o ./temp",
+    "tools:bench": "bazel run --verbose_failures --compilation_mode=opt --config=symbols //tools:bench",
+    "ray:rasterizer_bench": "bazel run --verbose_failures --compilation_mode=opt --config=symbols //ray/drawlib:rasterizer_bench",
+    "image_test:Generate_Images": "mkdir create_images && bazel run //gm:gmapp -- -o \"$(pwd)/create_images\" && chmod +x ./sailloft/image_script.sh",
+    "image_test:Compute_Against_Base": "./sailloft/image_script.sh $(pwd)/create_images $GITHUB_SHA GithubRunner ${{ runner.os }} ${{ runner.architecture }}"
+  }
 }
