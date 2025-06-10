@@ -7,60 +7,80 @@
           "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp",
           "bazel clean --expunge"
         ],
-        "runDevices": {},
+        "runDevices": ["work-macOS-test-test-test-test-test"],
         "buildFP": "./bazel-bin/apps/myapp/myapp"
       },
       "build_myapp_portable": {
         "buildCommands": [
           "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp_portable"
         ],
-        "runDevices": {},
+        "runDevices": ["work-macOS-test-test-test-test-test"],
         "buildFP": "./bazel-bin/apps/myapp/myapp_portable"
       },
       "build_draw:draw": {
         "buildCommands": [
           "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/draw:draw"
         ],
-        "runDevices": {},
+        "runDevices": ["work-macOS-test-test-test-test-test"],
         "buildFP": "./bazel-bin/apps/draw/draw"
       },
       "build_ray:apps": {
         "buildCommands": [
           "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //ray/apps/..."
         ],
-        "runDevices": {},
+        "runDevices": ["work-macOS-test-test-test-test-test"],
         "buildFP": "./bazel-bin/ray/apps"
       },
       "build_tools:cskiaapp": {
         "buildCommands": [
           "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //tools:cskiaapp"
         ],
-        "runDevices": {},
+        "runDevices": ["work-macOS-test-test-test-test-test"],
         "buildFP": "./bazel-bin/tools/cskiaapp"
-      }
-    },
-    "Run": {
+      },
       "run_tools:tests": {
-        "command": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:tests"
+        "buildCommands": [
+          "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:tests"
+        ],
+        "runDevices": ["work-macOS-test-test-test-test-test"]
       },
       "run_ray:unittests": {
-        "command": "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //ray:unittests"
+        "buildCommands": [
+          "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //ray:unittests"
+        ],
+        "runDevices": ["work-macOS-test-test-test-test-test"]
       },
       "run_tools:rasterapp": {
-        "command": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:rasterapp"
+        "buildCommands": [
+          "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:rasterapp"
+        ],
+        "runDevices": ["work-macOS-test-test-test-test-test"]
       },
       "run_gm": {
-        "command": "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //gm:gmapp -- -o ./temp"
+        "buildCommands": [
+          "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //gm:gmapp -- -o ./temp"
+        ],
+        "runDevices": ["work-macOS-test-test-test-test-test"]
       },
       "run_wrapper_smart_ptrs:unittests": {
-        "command": "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //src/wrapper_smart_ptrs:unittests"
+        "buildCommands": [
+          "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //src/wrapper_smart_ptrs:unittests"
+        ],
+        "runDevices": ["work-macOS-test-test-test-test-test"]
       },
       "run_tools:bench": {
-        "command": "bazel run --verbose_failures --compilation_mode=opt --config=symbols //tools:bench"
+        "buildCommands": [
+          "bazel run --verbose_failures --compilation_mode=opt --config=symbols //tools:bench"
+        ],
+        "runDevices": ["work-macOS-test-test-test-test-test"]
       },
       "run_ray:rasterizer_bench": {
-        "command": "bazel run --verbose_failures --compilation_mode=opt --config=symbols //ray/drawlib:rasterizer_bench"
+        "buildCommands": [
+          "bazel run --verbose_failures --compilation_mode=opt --config=symbols //ray/drawlib:rasterizer_bench"
+        ],
+        "runDevices": ["work-macOS-test-test-test-test-test"]
       }
     }
   }
 }
+
