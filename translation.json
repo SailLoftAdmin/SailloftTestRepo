@@ -7,7 +7,7 @@
           "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp"
         ],
         "runDevices": {
-          "work-macOS-test-test-test-test-test": [] // empty to only build. Pass [] inside to run with no args
+          "work-macOS-test-test-test-test-test": []
         },
         "buildFP": "./bazel-bin/apps/myapp/myapp"
       },
