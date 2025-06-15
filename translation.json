@@ -4,8 +4,7 @@
     "Build": {
       "build_myapp": {
         "buildCommands": [
-          "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp",
-          "bazel clean --expunge"
+          "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //apps/myapp:myapp"
         ],
         "runDevices": {
           "work-macOS-test-test-test-test-test": [[]]
