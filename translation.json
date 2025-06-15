@@ -2,14 +2,14 @@
   "Test-MacOS-MacMini": {
     "Builder": "build-macOS-test-test-test-test-test",
     "Build": {
-      "run_tools:tests": {
+      "run_ray:unittests": {
         "buildCommands": [
-          "bazel run --verbose_failures --compilation_mode=dbg --config=symbols //tools:tests"
+          "bazel test --verbose_failures --compilation_mode=dbg --config=symbols //ray:unittests"
         ],
         "runDevices": {
           "work-macOS-test-test-test-test-test": [[]]
         },
-        "buildFP": "./bazel-bin/tools/tests"
+        "buildFP": "./bazel-bin/ray/unittests"
       }
     }
   }
