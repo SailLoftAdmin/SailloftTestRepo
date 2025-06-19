@@ -102,19 +102,19 @@
         "buildFP": "./bazel-bin/tools/bench"
       }
     }
-  }
-  "Test-MacOS-MacMini-bench":{
+  },
+  "Test-MacOS-MacMini-bench": {
     "Builder": "build-macOS-test-test-test-test-test",
-      "Build": {
-        "run_ray:rasterizer_bench": {
-          "buildCommands": [
-            "bazel run --verbose_failures --compilation_mode=opt --config=symbols //ray/drawlib:rasterizer_bench"
-          ],
-          "runDevices": {
-            "work-macOS-test-test-test-test-test": []
-          },
-          "buildFP": "./bazel-bin/ray/drawlib/rasterizer_bench"
-        }
+    "Build": {
+      "run_ray:rasterizer_bench": {
+        "buildCommands": [
+          "bazel run --verbose_failures --compilation_mode=opt --config=symbols //ray/drawlib:rasterizer_bench"
+        ],
+        "runDevices": {
+          "work-macOS-test-test-test-test-test": []
+        },
+        "buildFP": "./bazel-bin/ray/drawlib/rasterizer_bench"
+      }
     }
   }
 }
