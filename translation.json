@@ -100,7 +100,7 @@
           "work-macOS-test-test-test-test-test": [[]]
         },
         "buildFP": "./bazel-bin/tools/bench"
-      },
+      }
     }
   }
   "Test-MacOS-MacMini-bench":{
