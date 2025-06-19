@@ -111,7 +111,7 @@
           "bazel run --verbose_failures --compilation_mode=opt --config=symbols //ray/drawlib:rasterizer_bench"
         ],
         "runDevices": {
-          "work-macOS-test-test-test-test-test": []
+          "work-macOS-test-test-test-test-test": [[]]
         },
         "buildFP": "./bazel-bin/ray/drawlib/rasterizer_bench"
       }
