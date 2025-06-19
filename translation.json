@@ -34,7 +34,7 @@
           "bazel build --verbose_failures --compilation_mode=dbg --config=symbols //ray/apps/..."
         ],
         "runDevices": {
-          "work-macOS-test-test-test-test-test": []
+          "work-macOS-test-test-test-test-test": [[]]
         },
         "buildFP": "./bazel-bin/ray/apps"
       },
